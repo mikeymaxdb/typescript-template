@@ -1,0 +1,23 @@
+{
+  "name": "typescript-template",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "https://github.com/mikeymaxdb/typescript-template#readme",
+  "bugs": {
+    "url": "https://github.com/mikeymaxdb/typescript-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeymaxdb/typescript-template.git"
+  },
+  "license": "MIT",
+  "author": "mikeymaxdb",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
