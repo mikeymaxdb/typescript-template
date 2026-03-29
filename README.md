@@ -12,4 +12,5 @@ needed.
 - Husky + Lint-Staged
 
 - Vite
+- Vitest
 - React

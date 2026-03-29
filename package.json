@@ -1,7 +1,7 @@
 {
     "name": "typescript-template",
     "version": "0.0.0",
-    "description": "",
+    "description": "A starter template for typescript projects",
     "homepage": "https://github.com/mikeymaxdb/typescript-template#readme",
     "bugs": {
         "url": "https://github.com/mikeymaxdb/typescript-template/issues"
@@ -11,7 +11,8 @@
         "url": "git+https://github.com/mikeymaxdb/typescript-template.git"
     },
     "license": "MIT",
-    "author": "mikeymaxdb",
+    "author": "YOUR NAME HERE",
+    "private": true,
     "type": "module",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -19,14 +20,14 @@
         "dist"
     ],
     "scripts": {
-        "start": "vite",
         "build": "vite build",
-        "lint": "eslint .",
         "format": "prettier -l --write .",
         "format:check": "prettier --check .",
+        "lint": "eslint .",
+        "prepare": "husky",
+        "start": "vite",
         "test": "vitest",
-        "typecheck": "tsc --noEmit",
-        "prepare": "husky"
+        "typecheck": "tsc --noEmit"
     },
     "dependencies": {
         "react": "^19.2.4",
