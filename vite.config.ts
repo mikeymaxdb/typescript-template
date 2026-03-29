@@ -15,6 +15,7 @@ export default defineConfig({
         tsconfigPaths: true,
     },
     test: {
+        environment: 'jsdom',
         typecheck: {
             enabled: true,
             ignoreSourceErrors: true,
