@@ -1,7 +1,6 @@
 import eslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
+import eslintReact from '@eslint-react/eslint-plugin'
 import js from '@eslint/js'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
@@ -14,12 +13,10 @@ export default defineConfig([
         extends: [
             eslintComments.recommended,
             js.configs.recommended,
-            react.configs.flat.recommended,
-            react.configs.flat['jsx-runtime'],
-            reactHooks.configs.flat.recommended,
             reactRefresh.configs.vite,
             tseslint.configs.strictTypeChecked,
             tseslint.configs.stylisticTypeChecked,
+            eslintReact.configs['strict-type-checked'],
         ],
         settings: {
             react: { version: 'detect' },
@@ -27,8 +24,9 @@ export default defineConfig([
         languageOptions: {
             ecmaVersion: 2025,
             globals: globals.browser,
+            parser: tseslint.parser,
             parserOptions: {
-                project: ['./tsconfig.app.json', './tsconfig.node.json'],
+                projectService: true,
                 tsconfigRootDir: import.meta.dirname,
             },
         },
