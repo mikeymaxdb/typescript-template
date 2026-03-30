@@ -33,6 +33,7 @@ export default defineConfig([
         rules: {
             // Use type instead of interface
             '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+            '@typescript-eslint/consistent-type-imports': 'error',
             // No type assertions
             '@typescript-eslint/consistent-type-assertions': [
                 'error',
