@@ -2,7 +2,7 @@ import { act } from 'react'
 import { createRoot } from 'react-dom/client'
 import { expect, test } from 'vitest'
 
-import { App } from './App.tsx'
+import { App } from './app'
 
 test('renders App into the DOM', () => {
     const root = document.createElement('div')

@@ -24,6 +24,7 @@
         "outDir": "dist",
         "noEmit": true,
         "declaration": false,
+        "noEmitOnError": true,
 
         // Linting
         "allowUnreachableCode": false,
