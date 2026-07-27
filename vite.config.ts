@@ -2,16 +2,17 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
+// oxlint-disable-next-line no-default-export -- Default export required
 export default defineConfig({
     build: {
         outDir: './dist',
     },
-    server: {
-        port: 2080,
-    },
     plugins: [react()],
     resolve: {
         tsconfigPaths: true,
+    },
+    server: {
+        port: 2080,
     },
     test: {
         environment: 'jsdom',

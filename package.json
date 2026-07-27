@@ -23,7 +23,8 @@
         "build": "vite build",
         "format": "prettier -l --write .",
         "format:check": "prettier --check .",
-        "lint": "eslint .",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix",
         "prepare": "husky",
         "start": "vite",
         "test": "vitest",
@@ -31,27 +32,23 @@
         "typecheck:watch": "tsc --build --noEmit --watch"
     },
     "dependencies": {
+        "oxlint": "^1.74.0",
+        "oxlint-tsgolint": "^0.24.0",
         "react": "^19.2.4",
         "react-dom": "^19.2.4"
     },
     "devDependencies": {
-        "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
-        "@eslint-react/eslint-plugin": "^3.0.0",
-        "@eslint/js": "^9.39.4",
         "@trivago/prettier-plugin-sort-imports": "^6.0.0",
         "@types/node": "^26.1.0",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^6.0.1",
-        "eslint": "^10.1.0",
-        "eslint-plugin-react-refresh": "^0.5.2",
         "globals": "^17.4.0",
         "husky": "^9.1.7",
         "jsdom": "^29.0.1",
         "lint-staged": "^17.0.5",
         "prettier": "^3.8.1",
         "typescript": "~5.9.3",
-        "typescript-eslint": "^8.57.2",
         "vite": "^8.0.1",
         "vitest": "^4.0.3"
     },
@@ -85,7 +82,7 @@
             "prettier --write --ignore-unknown"
         ],
         "src/**/*": [
-            "eslint",
+            "oxlint",
             "vitest related --run"
         ],
         "*.{ts,tsx}": [
