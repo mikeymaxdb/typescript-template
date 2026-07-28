@@ -1,28 +1,28 @@
 {
     "name": "typescript-template",
     "version": "0.0.0",
+    "private": true,
     "description": "A starter template for typescript projects",
     "homepage": "https://github.com/mikeymaxdb/typescript-template#readme",
     "bugs": {
         "url": "https://github.com/mikeymaxdb/typescript-template/issues"
     },
+    "license": "MIT",
+    "author": "YOUR NAME HERE",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/mikeymaxdb/typescript-template.git"
     },
-    "license": "MIT",
-    "author": "YOUR NAME HERE",
-    "private": true,
-    "type": "module",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
     "files": [
         "dist"
     ],
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "scripts": {
         "build": "vite build",
-        "format": "prettier -l --write .",
-        "format:check": "prettier --check .",
+        "format": "oxfmt --write",
+        "format:check": "oxfmt --check",
         "lint": "oxlint",
         "lint:fix": "oxlint --fix",
         "prepare": "husky",
@@ -38,7 +38,6 @@
         "react-dom": "^19.2.4"
     },
     "devDependencies": {
-        "@trivago/prettier-plugin-sort-imports": "^6.0.0",
         "@types/node": "^26.1.0",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
@@ -47,39 +46,14 @@
         "husky": "^9.1.7",
         "jsdom": "^29.0.1",
         "lint-staged": "^17.0.5",
-        "prettier": "^3.8.1",
+        "oxfmt": "^0.59.0",
         "typescript": "~7.0.2",
         "vite": "^8.0.1",
         "vitest": "^4.0.3"
     },
-    "prettier": {
-        "printWidth": 90,
-        "tabWidth": 4,
-        "semi": false,
-        "singleQuote": true,
-        "plugins": [
-            "@trivago/prettier-plugin-sort-imports"
-        ],
-        "importOrder": [
-            "<THIRD_PARTY_MODULES>",
-            "^[~/]",
-            "^[./]"
-        ],
-        "importOrderSeparation": true,
-        "importOrderSortSpecifiers": true,
-        "overrides": [
-            {
-                "files": "*.md",
-                "options": {
-                    "printWidth": 80,
-                    "proseWrap": "always"
-                }
-            }
-        ]
-    },
     "lint-staged": {
         "*": [
-            "prettier --write --ignore-unknown"
+            "oxfmt"
         ],
         "src/**/*": [
             "oxlint",

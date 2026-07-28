@@ -2,7 +2,6 @@ import { defineConfig } from 'oxlint'
 
 // oxlint-disable-next-line no-default-export -- Default export required
 export default defineConfig({
-    $schema: './node_modules/oxlint/configuration_schema.json',
     categories: {
         correctness: 'error',
         nursery: 'error',
