@@ -32,8 +32,6 @@
         "typecheck:watch": "tsc --build --noEmit --watch"
     },
     "dependencies": {
-        "oxlint": "^1.74.0",
-        "oxlint-tsgolint": "^0.25.0",
         "react": "^19.2.4",
         "react-dom": "^19.2.4"
     },
@@ -47,6 +45,8 @@
         "jsdom": "^29.0.1",
         "lint-staged": "^17.0.5",
         "oxfmt": "^0.59.0",
+        "oxlint": "^1.74.0",
+        "oxlint-tsgolint": "^0.25.0",
         "typescript": "~7.0.2",
         "vite": "^8.0.1",
         "vitest": "^4.0.3"
