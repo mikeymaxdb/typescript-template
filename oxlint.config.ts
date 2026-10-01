@@ -48,6 +48,7 @@ export default defineConfig({
         'vitest',
     ],
     rules: {
+        'capitalized-comments': 'off',
         'id-length': 'off',
         'import/consistent-type-specifier-style': [
             'error',
@@ -65,7 +66,9 @@ export default defineConfig({
         'no-undefined': 'off',
         'no-void': 'off',
         'no-warning-comments': 'off',
+        'one-var': 'off',
         'oxc/no-async-await': 'off',
+        'oxc/no-map-spread': 'off',
         'oxc/no-optional-chaining': 'off',
         'oxc/no-rest-spread-properties': 'off',
         'react/function-component-definition': 'off',
@@ -85,6 +88,7 @@ export default defineConfig({
                 'ts-expect-error': 'allow-with-description',
             },
         ],
+        'typescript/consistent-type-definitions': ['error', 'type'],
         'typescript/prefer-readonly-parameter-types': 'off',
         'unicorn/filename-case': [
             'error',
@@ -93,6 +97,7 @@ export default defineConfig({
             },
         ],
         'unicorn/no-null': 'off',
+        'unicorn/prefer-export-from': 'off',
         'unicorn/require-module-specifiers': 'off',
         'vitest/no-importing-vitest-globals': 'off',
         'vitest/require-hook': 'off',
