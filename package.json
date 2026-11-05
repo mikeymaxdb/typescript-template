@@ -59,7 +59,8 @@
             "vitest related --run"
         ],
         "*.{ts,tsx}": [
-            "bash -c 'npm run typecheck'"
+            "bash -c 'pnpm run typecheck'"
         ]
-    }
+    },
+    "packageManager": "pnpm@12.18.0"
 }
