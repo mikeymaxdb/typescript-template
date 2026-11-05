@@ -78,6 +78,7 @@ export default defineConfig({
                 extensions: ['tsx'],
             },
         ],
+        'react/jsx-max-depth': ['warn', { max: 7 }],
         'react/jsx-no-literals': 'off',
         'react/react-in-jsx-scope': 'off',
         'sort-imports': 'off',
